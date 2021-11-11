@@ -110,7 +110,7 @@ local function prepare(url_parts, session, config)
         end
     end
 
-    if not headers["host"] then
+    if headers["host"] ~= url_parts.host then
         headers["host"] = url_parts.host
     end
 
